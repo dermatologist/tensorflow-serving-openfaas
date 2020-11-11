@@ -4,6 +4,11 @@ Example of packaging TensorFlow Serving with OpenFaaS to be deployed and managed
 
 This example was adapted from: https://www.tensorflow.org/serving
 
+## Chanes in this fork
+* Added folders for models and model_config
+* fprocess refers to model config file
+* Use [gotfimg](https://github.com/dermatologist/gotfimg) to submit an image from Go
+
 ## Pre-reqs
 
 * [OpenFaaS](https://docs.openfaas.com/)
@@ -87,14 +92,14 @@ Replicas:            1
 Available replicas:  1
 Invocations:         5
 Image:               alexellis2/ts-serve:latest
-Function process:    
+Function process:
 URL:                 http://127.0.0.1:8080/function/ts-serve
 Async URL:           http://127.0.0.1:8080/async-function/ts-serve
 Labels:              com.openfaas.function : ts-serve
                      function : true
 ```
 
-<!-- 
+<!--
 Create a request bin: https://requestbin.fullcontact.com/ i.e. `http://requestbin.fullcontact.com/tgjgrrtg` then run:
 
 ```
