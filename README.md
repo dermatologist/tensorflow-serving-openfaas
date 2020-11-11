@@ -22,7 +22,7 @@ This example was adapted from: https://www.tensorflow.org/serving
 ```sh
 $ mkdir -p ~/dev/
 $ cd ~/dev/
-$ git clone https://github.com/alexellis/tensorflow-serving-openfaas
+$ git clone https://github.com/dermatologist/tensorflow-serving-openfaas
 ```
 
 * Clone the sample model and copy it to the function's build context
@@ -30,9 +30,11 @@ $ git clone https://github.com/alexellis/tensorflow-serving-openfaas
 ```sh
 $ cd ~/dev/tensorflow-serving-openfaas
 
-$ git clone https://github.com/tensorflow/serving
+$ cp /your/model/localtion/model_config ~/dev/tensorflow-serving-openfaas
 
-$ cp -r serving/tensorflow_serving/servables/tensorflow/testdata/saved_model_half_plus_two_cpu ./ts-serve/saved_model_half_plus_two_cpu
+$ mkdir ~/dev/tensorflow-serving-openfaas/model
+
+copy saved_model.pb and variables folder to the new model folder
 ```
 
 * Edit the Docker Hub username
